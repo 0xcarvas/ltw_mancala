@@ -1,6 +1,5 @@
 
 document.querySelector('#show_login').addEventListener('click',() => {
-    console.log("Teste");
     document.querySelector('.popup').classList.add('active');
 });
 document.querySelector('.popup .close-btn').addEventListener('click',() => {
