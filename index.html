@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html>
+  <head>
     <link rel="stylesheet" href="styles.css">
+    <script src="mancala_logic.js" defer></script>
+    <title>Mancala</title>
+  </head>
 <body>
 
 <br>
 <div class="title"><h1>Mancala</h1></div>
+<div class="center">
+  <button id="show_login">Login</button>
+</div>
+<div class="popup">
+  <div class="close-btn">&times;</div>
+  <div class="form">
+    <h2>Log In</h2>
+    <div class="form-element">
+      <label for="email">Email</label>
+      <input type="text" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-element">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter password">
+    </div>
+    <div class="form-element">
+      <input type="checkbox" id="remember-me"> 
+      <label for="remember-me">Remember me</label>
+    </div>
+    <div class="form-element">
+      <button>Sign in</button>
+    </div>
+    <div class="form-element">
+      <a href="#">Forgot password?</a>
+    </div>
+  </div>
+</div>
+
+
 <br>
 
 <hr>
@@ -13,14 +46,14 @@
 <p><h3>Configuração:</h3></p>
 
 <label for="cavidades">Número de cavidades de cada lado:</label>
-<input type="range" value="1" min="1" max="8" oninput="this.nextElementSibling.value = this.value">
-<output>1</output>
+<input type="range" value="5" min="1" max="8" oninput="this.nextElementSibling.value = this.value">
+<output>5</output>
 
 <br>
 
 <label for="sementes">Número inicial de sementes por cavidade:</label>
-<input type="range" value="1" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
-<output>1</output>
+<input type="range" value="5" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+<output>5</output>
 
 <br>
 
@@ -34,7 +67,7 @@
 
 <label for="Oponente">Selecione o primeiro a jogar:</label>
 <INPUT TYPE="Radio" Name="Jogo" Value="Iniciar"> Eu
-<INPUT TYPE="Radio" Name="Jogo" Value="Passar"> Computdador
+<INPUT TYPE="Radio" Name="Jogo" Value="Passar"> Computador
 
 <br>
 
@@ -46,18 +79,63 @@
   <option value="4">Impossible</option>
 </select>
 
+<div id="startgame"><button onclick="startGame()">Iniciar Jogo</button></div>
+
+</div>
 <br>
 
-<button type="button">Iniciar Jogo</button>
+<button id="open">
+  Rules
+</button>
+
+<div class="modal-container" id="modal_container">
+  <div class="modal">
+    <h1> Rules </h1>
+    <p> Cada jogador controla as cavidades do seu lado</p>
+    <p> No início do jogo, os armazéns estão vazios</p>
+    <p> As restantes cavidades têm o mesmo número de sementes</p>
+    <p> Para semear, o jogador pega em todas as sementes de uma das suas cavidades e distribui-as pelas seguintes</p>
+    <p> Cada cavidade seguinte fica com mais uma semente</p>
+    <p> Semeadura é feita no sentido anti-horário</p>
+    <p> Se se passar pelo armazém do oponente, não se semeia, continua-se para a próxima cavidade</p>
+    <p> Se for o seu armazém, semear também</p>
+    <p> Se a última semente for semeada no seu armazém, pode voltar a jogar</p>
+    <p> Se a última semente for semeada numa sua cavidade vazia, pode recolher essa semente e todas as sementes da cavidade oposta do seu adversário</p>
+    <p> O jogo termina quando um dos jogadores ficar sem sementesnas suas cavidades</p>
+    <p> O outro jogador recolhe as sementes que sobraram do seu lado</p>
+    <p>Ganha quem tiver mais sementes no seu armazém</p>
+    <button id="close">
+      Close
+    </button>
+  </div>
 </div>
 
 <br>
 
-<div class="board">
-    <div class= "first row">row</div>
-    <div> column</div>
-    <div>Three</div>
+<div class="boardcontainer">
+  <div class="flex-container">
+    <div class="armazem-1 armazem"></div>
+    <div class="rows">
+      <div class="toprows">
+        <div class="hole-11 holes">11</div>
+        <div class="hole-12 holes">12</div>
+        <div class="hole-13 holes">13</div>
+        <div class="hole-14 holes">14</div>
+        <div class="hole-15 holes">15</div>
+    </div>
+    <div class="bottomrows">
+      <div class="hole-21 holes">21</div>
+      <div class="hole-22 holes">22</div>
+      <div class="hole-23 holes">23</div>
+      <div class="hole-24 holes">24</div>
+      <div class="hole-25 holes">25</div>
+    </div>
+  </div>
+    <div class="armazem-2 armazem"></div>
+  </div>
 </div>
+
+<br>
 
 </body>
 </html>
