@@ -57,6 +57,7 @@ body{
 .popup.active{
     top: 50%; 
     opacity: 1;
+    z-index: 1;
     transform: translate(-50%,-50%) scale(1); 
      transition: top 0ms ease-in-out 0ms, 
                 opacity 200ms ease-in-out 0ms,
@@ -184,6 +185,7 @@ body{
 .modal-container.show{
     pointer-events: auto;
     opacity: 1;
+    z-index: 1;
 }
 .modal{
     background-color: #fff;
@@ -205,7 +207,7 @@ body{
     text-align: justify;
 }
 
-.boardcontainer{
+.board-container{
     display: flex;
     justify-content: center;
 }
@@ -218,28 +220,41 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    max-width: 60%;
+    width: 70%;
+    max-width: 70%;
     background-image: url('wood.jpg');
 }
 
 .holes{
     flex:1;
-    background-color: #ff0037;
+    background-color: rgba(0, 0, 0, 0.3);
     color: white;
     font-size: 35px;
     padding: 20px;
     margin: 10px;
     border-radius: 80px;
-    text-align: center;
-    height: 50%;
+    height: 200px;
+    width: 150px;
+    max-width: 70%;
+}
+
+.flex-seeds{
+    display: flex;
+}
+
+#seeds{
+    background-color: rgb(251, 48, 48);
+    height: 40px;
+    width: 25px;
+    border-radius: 70px;
+    opacity: 0.7;
 }
 
 .armazem{
     background-color: black;
     height: 100%;
     border-radius: 50px;
-    opacity: 0.25;
+    opacity: 0.3;
     width: 15%;
 }
  .rows{
@@ -247,10 +262,13 @@ body{
     flex-direction: column;
     width: 70%;
     height: 100%;
+    flex-wrap: wrap;
 }
 
 .toprows, .bottomrows{
     display: flex;
+    /*flex-wrap: wrap;*/
+    max-width: 900px;
     height: 50%;
     align-items: center;
 }

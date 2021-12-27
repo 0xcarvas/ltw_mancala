@@ -46,13 +46,13 @@
 <p><h3>Configuração:</h3></p>
 
 <label for="cavidades">Número de cavidades de cada lado:</label>
-<input type="range" value="5" min="1" max="8" oninput="this.nextElementSibling.value = this.value">
+<input type="range" value="5" min="1" max="8" id="numHoles" oninput="this.nextElementSibling.value = this.value">
 <output>5</output>
 
 <br>
 
 <label for="sementes">Número inicial de sementes por cavidade:</label>
-<input type="range" value="5" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+<input type="range" value="5" min="1" max="10" id="numSeeds" oninput="this.nextElementSibling.value = this.value">
 <output>5</output>
 
 <br>
@@ -112,26 +112,106 @@
 
 <br>
 
-<div class="boardcontainer">
+<div class="board-container" id="board">
   <div class="flex-container">
-    <div class="armazem-1 armazem"></div>
+    <div class="armazem-1 armazem" id="holes"></div>
     <div class="rows">
       <div class="toprows">
-        <div class="hole-11 holes">11</div>
-        <div class="hole-12 holes">12</div>
-        <div class="hole-13 holes">13</div>
-        <div class="hole-14 holes">14</div>
-        <div class="hole-15 holes">15</div>
+        <div class="holes" id="holes">
+          <div class="flex-seeds">
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+          </div>
+        </div>
+        <div class="holes" id="holes">
+          <div class="flex-seeds">
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+          </div>
+        </div>
+        <div class="holes" id="holes">
+          <div class="flex-seeds">
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+          </div>
+        </div>
+        <div class="holes" id="holes">
+          <div class="flex-seeds">
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+          </div>
+        </div>
+        <div class="holes" id="holes">
+          <div class="flex-seeds">
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+            <div id="seeds"></div>
+          </div>
+        </div>
     </div>
     <div class="bottomrows">
-      <div class="hole-21 holes">21</div>
-      <div class="hole-22 holes">22</div>
-      <div class="hole-23 holes">23</div>
-      <div class="hole-24 holes">24</div>
-      <div class="hole-25 holes">25</div>
+      <div class="holes" id="holes">
+        <div class="flex-seeds">
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+        </div>
+      </div>
+      <div class="holes" id="holes">
+        <div class="flex-seeds">
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+        </div>
+      </div>
+      <div class="holes" id="holes">
+        <div class="flex-seeds">
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+        </div>
+      </div>
+      <div class="holes" id="holes">
+        <div class="flex-seeds">
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+        </div>
+      </div>
+      <div class="holes" id="holes">
+        <div class="flex-seeds">
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+          <div id="seeds"></div>
+        </div>
+      </div>
     </div>
   </div>
-    <div class="armazem-2 armazem"></div>
+    <div class="armazem-2 armazem" id="holes"></div>
   </div>
 </div>
 
