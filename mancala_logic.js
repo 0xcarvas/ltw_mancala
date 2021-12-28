@@ -155,6 +155,7 @@ class Board{
 
 function startGame(){
     var button = document.getElementById("startgame");
+    const aux = document.querySelectorAll(".holes, .armazem");
     button.disable = false;
     //console.log(document.getElementById('numHoles').value + ' ' + document.getElementById('numSeeds').value);
     var board = new Board(document.getElementById('numHoles').value,document.getElementById('numSeeds').value);
@@ -163,9 +164,11 @@ function startGame(){
         //verificar onde carregou
         //
         console.log("TEste");
-        // document.getElementsByClassName('holes').addEventListener('click',() =>{
-        //     console.log("Click in hole!");
-        // });
+        for(let i = 0; i < aux.length; i++){
+            aux[i].addEventListener("click", function(){
+                console.log("Clicked in a hole");
+            });
+        }
         //await sleep(10000);
         board.gameOver = true;
     }
