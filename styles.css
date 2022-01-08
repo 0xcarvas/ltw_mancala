@@ -242,12 +242,12 @@ body{
     display: flex;
 }
 
-#seeds{
+.seeds{
     background-color: rgb(251, 48, 48);
-    height: 40px;
-    width: 25px;
-    border-radius: 70px;
-    opacity: 0.7;
+    height: 25px;
+    width: 15px;
+    border-radius: 50%;
+    opacity: 0.9;
 }
 
 .armazem{
